@@ -1,0 +1,59 @@
+[
+    {
+        "task_name": "Provide detailed product information for requested robots",
+        "steps": [
+            "Ask the user to specify the robot model or features they are interested in to understand their request.",
+            "Use FaissRAGWorker to retrieve detailed product information for the requested robot model from the company's internal documentation.",
+            "Deliver the retrieved product information to the user using MessageWorker.",
+            "Ask the user if they need additional information or have further questions about the robot.",
+            "If the user requests more details, use FaissRAGWorker to provide the additional information and deliver it via MessageWorker."
+        ]
+    },
+    {
+        "task_name": "Assist with purchasing and leasing inquiries",
+        "steps": [
+            "Use MessageWorker to greet the user and inquire about their specific purchasing or leasing questions or needs.",
+            "Use FaissRAGWorker to retrieve and provide relevant information based on the user's inquiry from the company's internal documentations, such as policies, FAQs, and product information.",
+            "Use MessageWorker to ask the user if they have any additional questions or need further clarification on the information provided.",
+            "If the user has more questions, use FaissRAGWorker to find and provide answers. If not, proceed to the next step.",
+            "Use MessageWorker to guide the user through the next steps for completing a purchase or entering a leasing agreement, providing any necessary instructions or links to relevant resources."
+        ]
+    },
+    {
+        "task_name": "Provide delivery schedule and timeline information",
+        "steps": [
+            "Provide delivery schedule and timeline information"
+        ]
+    },
+    {
+        "task_name": "Offer technical support and troubleshooting guidance",
+        "steps": [
+            "Inquire about the specific technical issue the user is experiencing, including details about the product or service involved.",
+            "Use the FaissRAGWorker to access internal documentation and provide targeted troubleshooting guidance based on the user's description of the issue.",
+            "If the internal resources are insufficient, use the SearchWorker to find additional troubleshooting information through real-time online search.",
+            "Deliver the gathered information and guidance to the user using the MessageWorker.",
+            "Ask the user if the issue is resolved or if they need further assistance.",
+            "If the issue is unresolved, provide options for escalation or additional support, and confirm the next steps with the user."
+        ]
+    },
+    {
+        "task_name": "Provide information on company policies and available services",
+        "steps": [
+            "Use the FaissRAGWorker to retrieve information from the company's internal documentation regarding the user's inquiry about company policies or available services.",
+            "Use the MessageWorker to deliver the retrieved information to the user, ensuring the message is clear and addresses the user's query.",
+            "Ask the user if they have any additional questions or need further clarification on the provided information using the MessageWorker.",
+            "If the user has more inquiries, repeat the process starting from step 1 to provide additional information. If the user's question does not match available resources, proceed with the DefaultWorker.",
+            "Thank the user for their inquiry and ask if there is anything else they need help with using the MessageWorker."
+        ]
+    },
+    {
+        "task_name": "Assist with scheduling demos and providing brochures",
+        "steps": [
+            "Inquire about the user's interest in scheduling a demo or obtaining a brochure using the MessageWorker.",
+            "If the user is interested in scheduling a demo, use the DefaultWorker to check available demo slots and provide options to the user.",
+            "If the user requests a brochure, use the FaissRAGWorker to retrieve relevant brochures from the company's documentation and share them with the user.",
+            "Ask the user if they need further assistance or have any specific questions using the MessageWorker.",
+            "Provide additional assistance or confirm the scheduled demo/brochure delivery as needed using the MessageWorker."
+        ]
+    }
+]

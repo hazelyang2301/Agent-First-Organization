@@ -1,0 +1,56 @@
+[
+    {
+        "task_name": "Provide help in flight search",
+        "steps": [
+            "Inquire about the user's travel preferences such as destination, travel dates, budget, and any specific airline preferences.",
+            "Use SearchWorker to find available flights based on the user's preferences and provide a list of options, highlighting cost-effective choices.",
+            "Ask the user if they would like more information on any of the flight options or if they need additional options.",
+            "Check if the user needs assistance with booking the flight or has additional questions about the chosen option.",
+            "Provide instructions for booking the flight or offer to guide them through the booking process to ensure successful completion."
+        ]
+    },
+    {
+        "task_name": "Provide help in destination recommendations",
+        "steps": [
+            "Initiate conversation with the user to understand their preferences for travel destinations, including interests, budget, travel dates, and any specific regions or countries of interest.",
+            "Use the FaissRAGWorker to gather relevant information from the company's internal documentation about potential travel destinations that match the user's preferences and budget.",
+            "Utilize the SearchWorker to gather real-time information on current travel deals and cost-effective times for traveling to the recommended destinations.",
+            "Present a curated list of recommended travel destinations and times to the user using the MessageWorker, highlighting the most cost-effective options.",
+            "Ask the user if they would like more information on any of the recommended destinations or if they have any additional preferences or constraints to consider.",
+            "Based on the user's feedback, refine the recommendations if needed and provide additional details or alternative options using the MessageWorker."
+        ]
+    },
+    {
+        "task_name": "Provide help in flight comparison",
+        "steps": [
+            "Inquire about the user's travel preferences, such as departure location, destination, travel dates, and any specific airlines or budget constraints.",
+            "Use SearchWorker to find current flight options that match the user's criteria, focusing on cost-effectiveness.",
+            "Present a comparison of the top flight options to the user, highlighting the best value choices.",
+            "Ask if the user needs more options or additional information on any specific flights.",
+            "Provide additional details about selected flights if requested, such as baggage policies or layover durations, using FaissRAGWorker if needed.",
+            "Confirm if the user is ready to proceed with booking or needs further assistance.",
+            "Guide the user through the booking process or suggest modifications to their search if necessary."
+        ]
+    },
+    {
+        "task_name": "Provide help in travel itinerary planning",
+        "steps": [
+            "Inquire about the user's travel preferences and requirements, such as destination, travel dates, budget, interests, and any specific activities or experiences they are looking for.",
+            "Use SearchWorker to find information on cost-effective travel options, including flights, accommodations, and activities, based on the user's preferences.",
+            "Provide a preliminary travel itinerary to the user, detailing potential destinations, travel costs, and activities.",
+            "Ask the user for feedback on the proposed itinerary and if there are any adjustments or additional preferences they would like to include.",
+            "Refine the itinerary based on user feedback, using SearchWorker for any additional information needed, and present the updated plan to the user.",
+            "Confirm with the user if they are satisfied with the itinerary or need further assistance in planning."
+        ]
+    },
+    {
+        "task_name": "Provide help in budget management",
+        "steps": [
+            "Inquire about the user's budget and any specific travel preferences, such as destination, travel dates, and preferred activities.",
+            "Use the SearchWorker to find cost-effective travel options that match the user's budget and preferences.",
+            "Present the curated list of travel options to the user and ask if they would like to refine the search or see more options.",
+            "Ask if the user needs additional information or assistance with booking any of the options.",
+            "Provide instructions for booking or saving the options and offer further assistance if needed."
+        ]
+    }
+]

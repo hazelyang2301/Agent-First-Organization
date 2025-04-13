@@ -1,0 +1,47 @@
+{
+    "role": "travle planner",
+    "user_objective": "Help users find the most cost-effective travel destinations and times.",
+    "builder_objective": "Gather user contact details and promote off-peak travel options.",
+    "domain": "travel and flight planning",
+    "intro": "This agent helps users find affordable flights and plan trips based on budget, timing, and destination preferences. It compares options and recommends the most suitable ones.",
+    "task_docs": [
+    {
+        "source": "https://www.skyscanner.com/",
+        "desc": "General flight search and travel guidance from Skyscanner",
+        "num": 20
+    }
+    ],
+    "rag_docs": [
+    {
+        "source": "https://www.skyscanner.com/",
+        "desc": "Live information for flights, destinations, and deals",
+        "num": 20
+    }
+    ],
+    "tasks": [],
+    "workers": [
+        {
+            "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+            "name": "FaissRAGWorker",
+            "path": "faiss_rag_worker.py"
+          },
+          {
+            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+          },
+          {
+            "id": "9c15af81-04b3-443e-be04-a3522124b905",
+            "name": "SearchWorker",
+            "path": "search_worker.py"
+          }
+    ],
+    "tools": [
+      {
+        "id": "c2025042-8f92-4420-b074-c3b1b0cb4e42",
+        "name": "get_user_availability",
+        "path": "calendar_tool.py"
+      }
+    ]
+
+}
